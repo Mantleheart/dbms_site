@@ -1,8 +1,8 @@
 <html>
 <body>
-<h3>Enter information about a restaurant to add to the database:</h3>
+<h3>Enter information about a student to add to the database:</h3>
 
-<a href="http://csce.uark.edu/~cdd008/project_java/jdbc_insert_restaurant.php">Go Back</a>
+<a href="http://csce.uark.edu/~cdd008/project_java/jdbc_insert_restaurant.php">Go Back (currently unlinked)</a>
 <form action="jdbc_insert_student.php" method="post">
     Name: <input type="text" name="Name"><br>
     Id: <input type="text" name="Id"><br>
@@ -13,7 +13,7 @@
 
 </body>
 </html>
-
+<!--CREATE TABLE Student(StudentId int,studentName varchar(64), Major varchar(8));-->
 <?php
 if (isset($_POST['submit'])) 
 {

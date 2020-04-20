@@ -4,12 +4,12 @@ import java.sql.*;
 jdbc_insert_student.java    // java program that is called by php that just does the insert; calls jdbc_db.java to connect and do the actual insert
 jdbc_db.java // class (no main program) that has useful methods
 
-CREATE TABLE Student(StudentId int,studentName varchar(64), Major varchar(8));
+CREATE TABLE Enrollment(StudentId int,DeptCode varchar(48), CourseNum varchar(10)); 
 */
 
 public class jdbc_insert_student
 {
-   // The main program that inserts a student
+   // The main program that inserts a restaurant
    public static void main(String[] args) throws SQLException
    {
       String Username = "cdd008";              // Change to your own username
@@ -22,27 +22,27 @@ public class jdbc_insert_student
 
       // For debugging purposes:  Show the database before the insert
       StringBuilder builder = new StringBuilder();
-      String query1 = "SELECT * from Student";
-      builder.append("<br> Table Student before:" + myDB.query(query1) + "<br>");
+      String query1 = "SELECT * from Enrollment";
+      builder.append("<br> Table Enrollment before:" + myDB.query(query1) + "<br>");
 
-      // Parse input string to get student Name, ID, MAJOR
+      // Parse input string to get course Name and Address
 
-      String name = "NAME";
-      String id = "ID";
-      String major = "MAJOR";
+      int StudentID = "STUDENTID";
+      String DeptCode = "DEPTCODE";
+      String CourseNum = "COURSENUM";
 
       // Read command line arguments
       // args[0] is the first parameter
-      id = args[0];
-      name = args[1];
-      major = args[2];
+      StudentId = args[0];
+      DeptCode = args[1];
+      CourseNum = args[2];
 
-      // Insert the new student
-      String input =  id + ",'" + name + "','" + major + "'";
-      myDB.insert("Student", input);    // insert new student
+      // Insert the new course
+      String input =  StudentID + ",'" + DeptCode + ",'" + CourseNum + "'";
+      myDB.insert("Enrollment", input);    // insert new course
 
       // For debugging purposes:  Show the database after the insert
-      builder.append("<br><br><br> Table Student after:" + myDB.query(query1));
+      builder.append("<br><br><br> Table Enrollment after:" + myDB.query(query1));
       System.out.println(builder.toString());
 
       myDB.disConnect();

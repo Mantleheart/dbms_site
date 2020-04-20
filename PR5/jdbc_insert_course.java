@@ -4,12 +4,12 @@ import java.sql.*;
 jdbc_insert_student.java    // java program that is called by php that just does the insert; calls jdbc_db.java to connect and do the actual insert
 jdbc_db.java // class (no main program) that has useful methods
 
-CREATE TABLE Student(StudentId int,studentName varchar(64), Major varchar(8));
+CREATE TABLE Course(DeptCode varchar(48), CourseNum varchar(10), Title varchar(64),CreditHours decimal(3,2)); 
 */
 
 public class jdbc_insert_student
 {
-   // The main program that inserts a student
+   // The main program that inserts a restaurant
    public static void main(String[] args) throws SQLException
    {
       String Username = "cdd008";              // Change to your own username
@@ -22,27 +22,29 @@ public class jdbc_insert_student
 
       // For debugging purposes:  Show the database before the insert
       StringBuilder builder = new StringBuilder();
-      String query1 = "SELECT * from Student";
-      builder.append("<br> Table Student before:" + myDB.query(query1) + "<br>");
+      String query1 = "SELECT * from Course";
+      builder.append("<br> Table Course before:" + myDB.query(query1) + "<br>");
 
-      // Parse input string to get student Name, ID, MAJOR
+      // Parse input string to get course Name and Address
 
-      String name = "NAME";
-      String id = "ID";
-      String major = "MAJOR";
+      String DeptCode = "DEPTCODE";
+      String CourseNum = "COURSENUM";
+      String Title = "TITLE";
+      float CreditHours = "CREDITHOURS";
 
       // Read command line arguments
       // args[0] is the first parameter
-      id = args[0];
-      name = args[1];
-      major = args[2];
+      DeptCode = args[0];
+      CourseNum = args[1];
+      Title = args[2];
+      CreditHours = args[3];
 
-      // Insert the new student
-      String input =  id + ",'" + name + "','" + major + "'";
-      myDB.insert("Student", input);    // insert new student
+      // Insert the new course
+      String input =  DeptCode + ",'" + CourseNum + "','" + Title + "','" + CreditHours + "'";
+      myDB.insert("Course", input);    // insert new course
 
       // For debugging purposes:  Show the database after the insert
-      builder.append("<br><br><br> Table Student after:" + myDB.query(query1));
+      builder.append("<br><br><br> Table Course after:" + myDB.query(query1));
       System.out.println(builder.toString());
 
       myDB.disConnect();
