@@ -2,11 +2,11 @@
 <body>
 <h3>Enter information about an enrollment to add to the database:</h3>
 
-<a href="http://csce.uark.edu/~cdd008/project_java/jdbc_insert_restaurant.php">Go Back (currently unlinked)</a>
+<a href="http://csce.uark.edu/~cdd008/PR5/dbms.html">Go Back</a>
 <form action="jdbc_insert_student.php" method="post">
     Student ID: <input type="int" name="StudentID"><br>
     Dept Code: <input type="text" name="DeptCode"><br>
-    Course Num: <input type="text" name="CourseNum"><br>
+    Course Number: <input type="text" name="CourseNum"><br>
     <input name="submit" type="submit" >
 </form>
 <br><br>
@@ -22,7 +22,7 @@ if (isset($_POST['submit']))
     $deptCode = escapeshellarg($_POST[DeptCode]);
     $courseNum = escapeshellarg($_POST[CourseNum]);
                                                                                     //What is the order?
-    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_insert_course ' . $studentID . ' ' . $deptCode . ' ' . $courseNum;
+    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_insert_enrollment ' . $studentID . ' ' . $deptCode . ' ' . $courseNum;
 
     // remove dangerous characters from command to protect web server
     $command = escapeshellcmd($command);
