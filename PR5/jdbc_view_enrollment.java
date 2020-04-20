@@ -9,7 +9,7 @@ jdbc_db.java // class (no main program) that has useful methods
 CREATE TABLE Enrollment(StudentId int,DeptCode varchar(48), CourseNum varchar(10)); 
 */
 
-public class jdbc_insert_student
+public class jdbc_view_enrollment
 {
    // The main program that inserts a restaurant
    public static void main(String[] args) throws SQLException

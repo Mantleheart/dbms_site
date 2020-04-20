@@ -1,47 +1,5 @@
 import java.sql.*;
 
-
-//THIS AINT DONE YET
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 jdbc_insert_student.java    // java program that is called by php that just does the insert; calls jdbc_db.java to connect and do the actual insert
 jdbc_db.java // class (no main program) that has useful methods
@@ -49,7 +7,7 @@ jdbc_db.java // class (no main program) that has useful methods
 CREATE TABLE Student(StudentId int,studentName varchar(64), Major varchar(8));
 */
 
-public class jdbc_insert_student
+public class jdbc_view_student
 {
    // The main program that inserts a student
    public static void main(String[] args) throws SQLException

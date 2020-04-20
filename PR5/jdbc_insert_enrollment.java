@@ -7,7 +7,7 @@ jdbc_db.java // class (no main program) that has useful methods
 CREATE TABLE Enrollment(StudentId int,DeptCode varchar(48), CourseNum varchar(10)); 
 */
 
-public class jdbc_insert_student
+public class jdbc_insert_enrollment
 {
    // The main program that inserts a restaurant
    public static void main(String[] args) throws SQLException
@@ -27,13 +27,13 @@ public class jdbc_insert_student
 
       // Parse input string to get course Name and Address
 
-      int StudentID = "STUDENTID";
+      String StudentID = "STUDENTID";
       String DeptCode = "DEPTCODE";
       String CourseNum = "COURSENUM";
 
       // Read command line arguments
       // args[0] is the first parameter
-      StudentId = args[0];
+      StudentID = args[0];
       DeptCode = args[1];
       CourseNum = args[2];
 
