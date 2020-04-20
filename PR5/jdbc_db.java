@@ -129,18 +129,10 @@ public class jdbc_db
       statement.executeUpdate("DELETE from MenuItem");
       statement.executeUpdate("DELETE from Dish");
       statement.executeUpdate("DELETE from Restaurant");
-
+/*
       statement.executeUpdate("DELETE from Student");
       statement.executeUpdate("DELETE from Course");
       statement.executeUpdate("DELETE from Enrollment");
-   
-      /*
-      CREATE TABLE Student(StudentId int,studentName varchar(64), Major varchar(8));
- 
-      CREATE TABLE Course(DeptCode varchar(48), CourseNum varchar(10), Title varchar(64),CreditHours decimal(3,2)); 
-
-      CREATE TABLE Enrollment(StudentId int,DeptCode varchar(48), CourseNum varchar(10));
-      */
       insert ("Student", "101, 'Mike Oldfield', 'MUSC'");
       insert ("Student", "506, 'Johnny Joestar', 'LIBR'");
       insert ("Student", "8675309, 'Tommy Tutone', 'ROCK'");
@@ -151,7 +143,7 @@ public class jdbc_db
 
       insert ("Enrollment", "506, 20005, 20");
       insert ("Enrollment", "8675309, 12345, 50");
-
+*/
 
       insert("Restaurant", "0, 'Tasty Thai', 'Asian', 'Dallas'");
       insert("Restaurant", "3,'Eureka Pizza','Pizza', 'Fayetteville'");
