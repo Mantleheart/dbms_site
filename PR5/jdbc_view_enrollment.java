@@ -2,46 +2,6 @@ import java.sql.*;
 
 
 //THIS AINT DONE YET
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 jdbc_insert_student.java    // java program that is called by php that just does the insert; calls jdbc_db.java to connect and do the actual insert
 jdbc_db.java // class (no main program) that has useful methods
@@ -64,27 +24,11 @@ public class jdbc_insert_student
 
       // For debugging purposes:  Show the database before the insert
       StringBuilder builder = new StringBuilder();
-      String query1 = "SELECT * from Enrollment";
-      builder.append("<br> Table Enrollment before:" + myDB.query(query1) + "<br>");
+      String query1 = "SELECT * from Enrollment WHERE StudentID=" 
+                     + args[0];
+//      builder.append("<br> Table Enrollment before:" + myDB.query(query1) + "<br>");
 
-      // Parse input string to get course Name and Address
-
-      int StudentID = "STUDENTID";
-      String DeptCode = "DEPTCODE";
-      String CourseNum = "COURSENUM";
-
-      // Read command line arguments
-      // args[0] is the first parameter
-      StudentId = args[0];
-      DeptCode = args[1];
-      CourseNum = args[2];
-
-      // Insert the new course
-      String input =  StudentID + ",'" + DeptCode + ",'" + CourseNum + "'";
-      myDB.insert("Enrollment", input);    // insert new course
-
-      // For debugging purposes:  Show the database after the insert
-      builder.append("<br><br><br> Table Enrollment after:" + myDB.query(query1));
+      builder.append("<br><br><br> Table Enrollment:" + myDB.query(query1));
       System.out.println(builder.toString());
 
       myDB.disConnect();

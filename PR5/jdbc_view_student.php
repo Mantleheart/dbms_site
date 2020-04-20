@@ -18,30 +18,6 @@
 
 <!-- THIS AINT DONE YET CHIEF -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--CREATE TABLE Student(StudentId int,studentName varchar(64), Major varchar(8));-->
 <?php
 if (isset($_POST['submit'])) 
@@ -58,6 +34,6 @@ if (isset($_POST['submit']))
     echo "<p>command: $command <p>";
  
     // run jdbc_insert_student.exe
-    system($command);           
+    system($command);
 }
 ?>

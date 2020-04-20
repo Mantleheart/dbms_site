@@ -65,26 +65,9 @@ public class jdbc_insert_student
       // For debugging purposes:  Show the database before the insert
       StringBuilder builder = new StringBuilder();
       String query1 = "SELECT * from Student";
-      builder.append("<br> Table Student before:" + myDB.query(query1) + "<br>");
+//      builder.append("<br> Table Student:" + myDB.query(query1) + "<br>");
 
-      // Parse input string to get student Name, ID, MAJOR
-
-      String name = "NAME";
-      String id = "ID";
-      String major = "MAJOR";
-
-      // Read command line arguments
-      // args[0] is the first parameter
-      id = args[0];
-      name = args[1];
-      major = args[2];
-
-      // Insert the new student
-      String input =  id + ",'" + name + "','" + major + "'";
-      myDB.insert("Student", input);    // insert new student
-
-      // For debugging purposes:  Show the database after the insert
-      builder.append("<br><br><br> Table Student after:" + myDB.query(query1));
+      builder.append("<br><br><br> Table Student:" + myDB.query(query1));
       System.out.println(builder.toString());
 
       myDB.disConnect();
