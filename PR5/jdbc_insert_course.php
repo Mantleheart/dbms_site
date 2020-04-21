@@ -3,7 +3,7 @@
 <h3>Enter information about a course to add to the database:</h3>
 
 <a href="http://csce.uark.edu/~cdd008/PR5/dbms.html">Go Back</a>
-<form action="jdbc_insert_student.php" method="post">
+<form action="jdbc_insert_course.php" method="post">
     Dept Code: <input type="text" name="DeptCode"><br>
     Course Number: <input type="text" name="CourseNum"><br>
     Title: <input type="text" name="Title"><br>

@@ -3,7 +3,7 @@
 <h3>Enter information about an enrollment to add to the database:</h3>
 
 <a href="http://csce.uark.edu/~cdd008/PR5/dbms.html">Go Back</a>
-<form action="jdbc_insert_student.php" method="post">
+<form action="jdbc_view_enrollment.php" method="post">
     Student ID: <input type="int" name="StudentID"><br>
     <input name="submit" type="submit" >
 </form>
