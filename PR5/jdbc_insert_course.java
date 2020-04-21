@@ -27,20 +27,20 @@ public class jdbc_insert_course
 
       // Parse input string to get course Name and Address
 
-      String DeptCode = "DEPTCODE";
-      String CourseNum = "COURSENUM";
-      String Title = "TITLE";
-      String CreditHours = "CREDITHOURS";
+      String deptcode = "DEPTCODE";
+      String coursenum = "COURSENUM";
+      String title = "TITLE";
+      String credithours = "CREDITHOURS";
 
       // Read command line arguments
       // args[0] is the first parameter
-      DeptCode = args[0];
-      CourseNum = args[1];
-      Title = args[2];
-      CreditHours = args[3];
+      deptcode = args[0];
+      coursenum = args[1];
+      title = args[2];
+      credithours = args[3];
 
       // Insert the new course
-      String input =  DeptCode + ",'" + CourseNum + "','" + Title + "','" + CreditHours + "'";
+      String input =  deptcode + ",'" + coursenum + "','" + title + "','" + credithours + "'";
       myDB.insert("Course", input);    // insert new course
 
       // For debugging purposes:  Show the database after the insert

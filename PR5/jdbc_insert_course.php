@@ -24,7 +24,8 @@ if (isset($_POST['submit']))
     $title = escapeshellarg($_POST[Title]);
     $creditHours = escapeshellarg($_POST[CreditHours]);
                                                                                     //What is the order?
-    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_insert_course ' . $deptCode . ' ' . $courseNum . ' ' . $title . ' ' . $creditHours;
+    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_insert_course ' . $deptcode . ' ' . $coursenum . ' ' . $title . ' ' . $credithours;
+                                                                                //' . $id . ' ' . $name . ' ' . $major;
 
     // remove dangerous characters from command to protect web server
     $command = escapeshellcmd($command);

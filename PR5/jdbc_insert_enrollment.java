@@ -27,18 +27,18 @@ public class jdbc_insert_enrollment
 
       // Parse input string to get course Name and Address
 
-      String StudentID = "STUDENTID";
-      String DeptCode = "DEPTCODE";
-      String CourseNum = "COURSENUM";
+      String studentid = "STUDENTID";
+      String deptcode = "DEPTCODE";
+      String coursenum = "COURSENUM";
 
       // Read command line arguments
       // args[0] is the first parameter
-      StudentID = args[0];
-      DeptCode = args[1];
-      CourseNum = args[2];
+      studentid = args[0];
+      deptcode = args[1];
+      coursenum = args[2];
 
       // Insert the new course
-      String input =  StudentID + ",'" + DeptCode + "'," + CourseNum;
+      String input =  studentid + ",'" + deptcode + "'," + coursenum;
       myDB.insert("Enrollment", input);    // insert new course
 
       // For debugging purposes:  Show the database after the insert
