@@ -11,10 +11,7 @@
 
 </body>
 </html>
-
-
-<!-- THIS AINT DONE YET CHIEF -->
-
+]
 <!--CREATE TABLE Course(DeptCode varchar(48), CourseNum varchar(10), Title varchar(64),CreditHours decimal(3,2));-->
 <?php
 if (isset($_POST['submit'])) 
