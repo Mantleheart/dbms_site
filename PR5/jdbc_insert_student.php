@@ -4,9 +4,9 @@
 
 <a href="http://csce.uark.edu/~cdd008/PR5/dbms.html">Go Back</a>
 <form action="jdbc_insert_student.php" method="post">
-    Name: <input type="text" name="Name"><br>
-    Id: <input type="text" name="Id"><br>
-    Major: <input type="text" name="Major"><br>
+    Name:   <input type="text" name="Name"> <br>
+    Id:     <input type="text" name="Id">   <br>
+    Major:  <input type="text" name="Major"><br>
     <input name="submit" type="submit" >
 </form>
 <br><br>

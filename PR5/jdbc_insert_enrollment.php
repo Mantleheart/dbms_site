@@ -4,9 +4,9 @@
 
 <a href="http://csce.uark.edu/~cdd008/PR5/dbms.html">Go Back</a>
 <form action="jdbc_insert_enrollment.php" method="post">
-    Student ID: <input type="int" name="StudentID"><br>
-    Dept Code: <input type="text" name="DeptCode"><br>
-    Course Number: <input type="text" name="CourseNum"><br>
+    Student ID:     <input type="int"   name="StudentID">   <br>
+    Dept Code:      <input type="text"  name="DeptCode">    <br>
+    Course Number:  <input type="text"  name="CourseNum">   <br>
     <input name="submit" type="submit" >
 </form>
 <br><br>

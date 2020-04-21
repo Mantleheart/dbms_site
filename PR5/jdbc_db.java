@@ -125,11 +125,6 @@ public class jdbc_db
    public void initDatabase() throws SQLException 
    {
       statement = connection.createStatement();
-      statement.executeUpdate("DELETE from FoodOrder");
-      statement.executeUpdate("DELETE from MenuItem");
-      statement.executeUpdate("DELETE from Dish");
-      statement.executeUpdate("DELETE from Restaurant");
-
       statement.executeUpdate("DELETE from Student");
       statement.executeUpdate("DELETE from Course");
       statement.executeUpdate("DELETE from Enrollment");
