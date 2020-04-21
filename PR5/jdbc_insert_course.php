@@ -5,9 +5,9 @@
 <a href="http://csce.uark.edu/~cdd008/PR5/dbms.html">Go Back</a>
 <form action="jdbc_insert_course.php" method="post">
     Dept Code:      <input type="text"  name="DeptCode">    <br>
-    Course Number:  <input type="int"  name="CourseNum">   <br>
+    Course Number:  <input type="text"  name="CourseNum">   <br>
     Title:          <input type="text"  name="Title">       <br>
-    Credit Hours:   <input type="float" name="CreditHours"> <br>
+    Credit Hours:   <input type="text" name="CreditHours"> <br>
     <input name="submit" type="submit" >
 </form>
 <br><br>
