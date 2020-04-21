@@ -22,6 +22,10 @@ public class jdbc_view_enrollment
       myDB.connect(Username, mysqlPassword);
       myDB.initDatabase();
 
+      String studentid = "STUDENTID";
+
+      studentid = args[0];
+
       // For debugging purposes:  Show the database before the insert
       StringBuilder builder = new StringBuilder();
       String query1 = "SELECT * from Course WHERE StudentID=" 

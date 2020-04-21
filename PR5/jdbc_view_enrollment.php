@@ -21,9 +21,9 @@
 if (isset($_POST['submit'])) 
 {
     // replace ' ' with '\ ' in the strings so they are treated as single command line args
-    $studentID = escapeshellarg($_POST[StudentID]);
+    $studentid = escapeshellarg($_POST[StudentID]);
                                                                                     //What is the order?
-    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_view_enrollment ' . $studentID;
+    $command = 'java -cp .:mysql-connector-java-5.1.40-bin.jar jdbc_view_enrollment ' . $studentid;
 
     // remove dangerous characters from command to protect web server
     $command = escapeshellcmd($command);
