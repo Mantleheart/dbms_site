@@ -4,7 +4,7 @@
 
 <a href="http://csce.uark.edu/~cdd008/PR5/dbms.html">Go Back</a>
 <form action="jdbc_view_course.php" method="post">
-    <button type="submit" value="Submit">View Course</button>
+    <!--<button type="submit" value="Submit">View Course</button>-->
     <input name="submit" type="submit" >
 </form>
 <br><br>
