@@ -38,7 +38,7 @@ public class jdbc_insert_enrollment
       CourseNum = args[2];
 
       // Insert the new course
-      String input =  StudentID + ",'" + DeptCode + ",'" + CourseNum + "'";
+      String input =  StudentID + ",'" + DeptCode + "'," + CourseNum;
       myDB.insert("Enrollment", input);    // insert new course
 
       // For debugging purposes:  Show the database after the insert
