@@ -12,9 +12,6 @@
 </html>
 
 
-
-<!-- THIS AINT DONE YET CHIEF -->
-
 <!--CREATE TABLE Student(StudentId int,studentName varchar(64), Major varchar(8));-->
 <?php
 if (isset($_POST['submit'])) 
