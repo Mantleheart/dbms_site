@@ -24,11 +24,11 @@ public class jdbc_view_enrollment
 
       // For debugging purposes:  Show the database before the insert
       StringBuilder builder = new StringBuilder();
-      String query1 = "SELECT * from Enrollment WHERE StudentID=" 
+      String query1 = "SELECT * from Course WHERE StudentID=" 
                      + args[0];
-//      builder.append("<br> Table Enrollment before:" + myDB.query(query1) + "<br>");
+//      builder.append("<br> Table Course before:" + myDB.query(query1) + "<br>");
 
-      builder.append("<br><br><br> Table Enrollment:" + myDB.query(query1));
+      builder.append("<br><br><br> Table Course:" + myDB.query(query1));
       System.out.println(builder.toString());
 
       myDB.disConnect();
