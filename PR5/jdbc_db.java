@@ -125,30 +125,41 @@ public class jdbc_db
    public void initDatabase() throws SQLException 
    {
       statement = connection.createStatement();
+      statement.executeUpdate("DELETE from FoodOrder");
+      statement.executeUpdate("DELETE from MenuItem");
+      statement.executeUpdate("DELETE from Dish");
+      statement.executeUpdate("DELETE from Restaurant");
+
       statement.executeUpdate("DELETE from Student");
       statement.executeUpdate("DELETE from Course");
       statement.executeUpdate("DELETE from Enrollment");
 
-      insert ("Student", "101,      'Mike Oldfield',  'MUSC'");
-      insert ("Student", "506,      'Johnny Joestar', 'LIBR'");
-      insert ("Student", "8675309,  'Tommy Tutone',   'ROCK'");
-      insert ("Student", "0,        'Frank Frank',    'ASIA'");
-      insert ("Student", "1,        'Diego Brando',   'DIO'")
-      insert ("Student", "2,        'Fleetwood Mac',  'TUSK'")
+      
+      insert ("Student", "101,      'Mike Oldfield',  'MUSC'   ");
+      insert ("Student", "506,      'Johnny Joestar', 'LIBR'   ");
+      insert ("Student", "8675309,  'Tommy Tutone',   'ROCK'   ");
+      insert ("Student", "0,        'Frank Frank',    'ASIA'   ");
+      insert ("Student", "1,        'Diego Brando',   'DIO'    ");
+      insert ("Student", "2,        'Fleetwood Mac',  'TUSK'   ");
 
-      insert ("Course", "20005,  20, 'Horseback Riding',                            150.23");
-      insert ("Course", "20006,  25, 'History of The United States of Valentine',   1985.85");
-      insert ("Course", "12345,  50, 'Music Theory 101',                            99.3");
-      insert ("Course", "1,      0,  'Horseback Riding',                            150.23");
-      insert ("Course", "2,      5,  'Vampires For Dummies',                        75.75");
-      insert ("Course", "3,      10, 'How to Create Stone Masks',                   1880");
-      insert ("Course", "4,      15, 'Fear and Loathing',                           13");
-      insert ("Course", "5,      20, 'Golden Spin',                                 16.3");
+      insert ("Course", "20005,  20, 'Horseback Riding',                            150.23   ");
+      insert ("Course", "20006,  25, 'History of The United States of Valentine',   1985.85  ");
+      insert ("Course", "12345,  50, 'Music Theory 101',                            99.3     ");
+      insert ("Course", "1,      0,  'Horseback Riding',                            150.23   ");
+      insert ("Course", "2,      5,  'Vampires For Dummies',                        75.75    ");
+      insert ("Course", "3,      10, 'How to Create Stone Masks',                   1880     ");
+      insert ("Course", "4,      15, 'Fear and Loathing',                           13.0     ");
+      insert ("Course", "5,      20, 'Golden Spin',                                 16.3     ");
 
-      insert ("Enrollment", "506,   20005,   20");
-      insert ("Enrollment", "0,     12345,   50");
-      insert ("Enrollment", "1,     5,       20");
-      insert ("Enrollment", "2,     3,       5");
-   
+      insert ("Enrollment", "506,   20005,   20    ");
+      insert ("Enrollment", "0,     12345,   50    ");
+      insert ("Enrollment", "1,     5,       20    ");
+      insert ("Enrollment", "2,     3,       5     ");
+/*
+      insert("Restaurant", "0,   'Tasty Thai',     'Asian', 'Dallas'                ");
+      insert("Dish",       "13,  'Spring Roll',    'ap'                             ");
+      insert("MenuItem",   "0,   0,                13,      8.00                    ");
+      insert("FoodOrder",  "0,   2, STR_To_DATE('01,03,2017', '%d,%m,%Y'),  '10:30' ");
+*/
    }
 }
